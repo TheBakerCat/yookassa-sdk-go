@@ -4,7 +4,7 @@ package yoopayment
 import (
 	"time"
 
-	yoocommon "github.com/rvinnie/yookassa-sdk-go/yookassa/common"
+	yoocommon "github.com/TheBakerCat/yookassa-sdk-go/yookassa/common"
 )
 
 // The Payment object contains all currently relevant information
@@ -40,6 +40,8 @@ type Payment struct {
 
 	// Payment method used for this payment.
 	PaymentMethod PaymentMethoder `json:"payment_method,omitempty"`
+
+	SavePaymentMethod bool `json:"save_payment_method,omitempty"`
 
 	// Time of order creation, based on UTC and specified in the ISO 8601 format.
 	// Example: 2017-11-03T11:52:31.827Z
